@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STOCK SELECTOR</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="checkboxes">
+      <label><input type="checkbox" value="SC"><span>Screener</span></label>
+      <label><input type="checkbox" value="GS"><span>Google Search</span></label>
+      <label><input type="checkbox" value="TVS"><span>TradingView Superchart</span></label>
+      <label><input type="checkbox" value="TVT"><span>TradingView Technicals</span></label>
+    </div>
+
+    <div class="sub-container">
+      
+      <button id="launch-button">LAUNCH</button>
+  
+      <div class="dropdown">
+        <select name="stock-selector" title="Choose Stock">
+          <option value="" disabled selected>. . .</option>
+          <option value="GUJGASLTD">GUJGASLTD</option>
+          <option value="ASIANPAINT">ASIANPAINT</option>
+          <option value="INDIGOPNTS">INDIGOPNTS</option>
+          <option value="SBIN">SBIN</option>
+          <option value="HCLTECH">HCLTECH</option>
+          <option value="ICICIBANK">ICICIBANK</option>
+          <option value="NAUKRI">NAUKRI</option>
+          <option value="RELIANCE">RELIANCE</option>d
+          <option value="SBICARD">SBICARD</option>
+          <option value="VEDL">VEDL</option>
+          <option value="WIPRO">WIPRO</option>
+          <option value="ZOMATO">ZOMATO</option>
+          <option value="SCI">SCI</option>
+          <option value="SUZLON">SUZLON</option>
+          <option value="KOTAKBANK">KOTAKBANK</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
