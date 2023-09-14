@@ -47,7 +47,6 @@ h1 {
 /* Buttons Styles */
 
 button {
-    appearance: none;
     background-color: #8a8a8a;
     border: none;
     height: 60px;
@@ -69,41 +68,42 @@ button:hover {
 
 /* Dropdown Styles */
 .dropdown {
+    display: flex;
+    gap: 20px;
     position: relative;
     width: 100%;
     margin-right: 20px;
     padding: 0;
     border: none;
     outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
     border-radius: 10px;
 }
 
 .dropdown select {
     appearance: none;
-    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: #fff;
     border: none;
     outline: none;
-    background-color: transparent;
     padding: 10px;
     font-family: Montserrat Medium;
     width: 100%;
     height: 40px;
     text-align: center;
     transition: all 0.2s ease;
-}
-
-.dropdown:after {
-    content: "\25BC";
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    color: #4f4f4f;
+    background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 5px),
+    calc(100% - 15px) calc(1em + 5px),
+    calc(100% - 2.5em) 0.8em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
 }
 
 .dropdown select:focus {
@@ -160,6 +160,24 @@ span {
     font-weight: 200;
 }
 
+#notes{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    padding:  2.5% 5% 5% 5%;
+    font-family: sans-serif;
+    color: white;
+    background-color: #272727;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.note{
+    padding: 2% 0;
+    border-bottom: #ccc 1px solid;
+}
+
 @media only screen and (max-width: 1000px) {
     .container {
         width: 100%;
@@ -198,5 +216,13 @@ span {
 
     button {
         margin: 40px 0 10px;
+    }
+
+    #notes{
+        padding:  5% 10% 10% 10%;
+    }
+
+    .note{
+        padding: 5% 0;
     }
 }
